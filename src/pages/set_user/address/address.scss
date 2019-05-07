@@ -1,0 +1,45 @@
+@import '../../../style/mixin.scss';
+
+.address{
+  width: 100%;
+  margin-top:.4rem;
+  border-top: 1px solid #d9d9d9;
+  border-bottom: 1px solid #d9d9d9;
+  .addresslist{
+    background: #fff;
+    li{
+      border-bottom: 1px solid #d9d9d9;
+      padding: .4rem;
+      @include flex(space-between);
+      p{
+        line-height: .9rem;
+        @include font(.6rem, #333);
+      }
+      .deletesite{
+        @include flex;
+        span{
+          display: block;
+          @include font(.8rem, #999);
+        }
+      }
+    }
+    li:nth-of-type(1){
+      background: #FFF8C3;
+    }
+  }
+  .addsite{
+    margin-top: .4rem;
+    background: #fff;
+    padding: .2rem .4rem;
+    border-top: 1px solid #d9d9d9;
+    @include flex(space-between);
+    span{
+      display: block;
+      @include font(.7rem, #333);
+      line-height: 1.4rem;
+    }
+    .icon-arrow-right{
+      @include font(.7rem, #ddd)
+    }
+  }
+}

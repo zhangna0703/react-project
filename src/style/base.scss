@@ -1,0 +1,70 @@
+*{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  font-style: normal;
+    /*防止点击闪烁*/
+  -webkit-tap-highlight-color: transparent;
+    /*缩放网页，文字大小不变*/
+  -webkit-text-size-adjust: none;
+  font-family: "Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+  font-weight: normal;
+  &:hover{
+    outline: none;
+  }
+}
+
+/* 设置iconfont标签font-family */ 
+[class^="icon-"],[class*=" icon-"] {
+  font-family: "iconfont";
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+/*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/  
+::-webkit-scrollbar  
+{  
+    width: 0px;  
+    height: 0px;  
+    background-color: #F5F5F5;  
+}  
+  
+/*定义滚动条轨道 内阴影+圆角*/  
+::-webkit-scrollbar-track  
+{  
+    -webkit-box-shadow: inset 0 0 1px rgba(0,0,0,0);  
+    border-radius: 10px;  
+    background-color: #F5F5F5;  
+}  
+
+
+/*去除虚线*/
+input:focus,select:focus,textarea:focus,button:focus{
+  outline: none;
+}
+input{
+  border: none
+}
+
+/*背景色*/
+html, body{
+  height: 100%;
+  width: 100%;
+  background-color: #f5f5f5;
+}
+
+input[type="button"], input[type="submit"], input[type="search"], input[type="reset"] {
+  -webkit-appearance: none;
+}
+
+
+a{
+  text-decoration: none;
+  /*ios禁止页面在新窗口打开*/
+  -webkit-touch-callout:none;
+}

@@ -1,0 +1,51 @@
+@import '../../../style/mixin.scss';
+
+.setname{
+  width: 15.2rem;
+  margin: 0 auto;
+  .setname-top{
+    padding-top: .4rem;
+    input{
+      background: none;
+      width: 15.2rem;
+      border: 1px solid #ddd;
+      border-radius: 2px;
+      padding:.2rem .1rem;
+      line-height: 1.2rem;
+      font-size: .7rem;
+      display: block;
+    }
+    .active-input{
+      border-color: #ea3106!important;
+    }
+    p{
+      width: 100%;
+      @include font(.4rem, #666);
+      padding:.4rem 0 1rem;
+    }
+    .active-text{
+      @include font(.55rem, #ea3106);
+      padding-top:.1rem;
+    }
+  }
+  .reset{
+    width: 100%;
+    background: #3199e8;
+    border-radius: 5px;
+    border:  #3199e8;
+    button{
+      display: block;
+      width: 100%;
+      background: none;
+      line-height: 2rem;
+      @include font(.7rem, #fff, center);
+      opacity: .6;
+      transition: all 1s;
+    }
+    .fontopacity{
+      transition: all 1s;
+      opacity:1!important;
+      font-weight: bold;
+    }
+  }
+}

@@ -1,0 +1,101 @@
+@import '../../style/mixin.scss';
+
+.login-container{
+  padding-top: 1.95rem;
+  p, span, input{
+    font-family: Helvetica Neue,Tahoma,Arial;
+  }
+}
+.login-tips{
+  @include font(.5rem, red);
+  padding: .4rem .6rem;
+  line-height: .5rem;
+  a{
+    color: #3b95e9;
+  }
+}
+
+.login-button{
+  margin: 0 .5rem 1rem;
+  @include font(.7rem, #fff);
+  background-color: #4cd964;
+  padding: .5rem 0;
+  border: 1px;
+  border-radius: 0.15rem;
+  text-align: center;
+}
+
+.button-switch{
+  background-color: #ccc;
+  @include flex();
+  @include wh(2rem, .7rem);
+  padding: 0 .2rem;
+  border: 1px;
+  border-radius: 0.5rem;
+  position: relative;
+  .circle-button{
+    transition: all .3s;
+    position: absolute;
+    z-index: 1;
+    left: -0.0rem;
+    top: -0.2rem;
+    background-color: #f1f1f1;
+    @include wh(1.2rem, 1.2rem);
+    border-radius: 50%;
+  }
+  .trans_to_right{
+    transform: translateX(1.2rem)
+  }
+  span{
+    @include font(.45rem, #fff);
+    transform: translateY(.05rem);
+  }
+  span:nth-of-type(2){
+    transform: translateY(-.08rem)
+  }
+}
+.change-to-text{
+  background-color: #4cd964;
+}
+
+.to-forget{
+  float: right;
+  @include font(.6rem, #3b95e9);
+  margin-right: .5rem;
+}
+
+.login-form{
+  background-color: #fff;
+  margin-top: .6rem;
+  .input-container{
+    @include flex(space-between);
+    padding: .6rem .8rem;
+    border-bottom: 1px solid #f1f1f1;
+    input{
+      @include font(.7rem, #666)
+    }
+  }
+
+  .captcha-code-container{
+    height: 2.2rem;
+    .img-change-img{
+      @include flex();
+      img{
+        @include wh(3.5rem, 1.5rem);
+        margin-right: .2rem;
+        font-size: .2rem;
+      }
+
+      .change-img{
+        @include flex();
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: 2rem;
+        p{
+          @include font(.55rem, #666)
+        }
+      }
+    }
+  }
+}
+

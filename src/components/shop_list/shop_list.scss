@@ -1,0 +1,131 @@
+@import '../../style/mixin.scss';
+@import '../../assets/iconfont/iconfont.css';
+.shoplist-container{
+  margin-bottom: 3rem;
+  transition:all 1s;
+  animation:bounceIn .6s;
+  width: 100%;
+}
+.shop-item{
+  padding: 0.7rem 0.3rem;
+  display: flex;
+  img{
+    @include wh(2.7rem, 2.7rem);
+    display: block;
+    margin-right: 0.4rem;
+  }
+  .shop-content{
+    flex: auto;
+    .shop-content-title{
+      @include flex(space-between, top);
+      margin-bottom: 0.3rem;
+      .title-left{
+        @include flex(left);
+        span:nth-child(1){
+          background-color: #ffd930;
+          color: #333;
+          font-size: 0.5rem;
+          font-weight: bold;
+          margin-right: 0.2rem;
+        }
+        span:nth-child(2){
+          color: #333;
+          font-size: 0.7rem;
+          font-weight: 500;
+        }
+        .star-num{
+          @include flex(left);
+          .icon-wuxing{
+            transform: scale(0.9);
+            color: #ff9a0d;
+            font-size: 0.03rem;
+          }
+        }
+        .star-rating{
+          font-size: 0.7rem;
+          color: #ff6000;
+          margin-left: 0.15rem;
+        }
+        .order-num{
+          transform: scale(0.8);
+          font-size: 0.4rem;
+          color: #666;
+          margin-top: 0.1rem;
+        }
+      }
+      .title-right{
+        font-size: 0.5rem!important;
+        color: #999;
+        transform: scale(0.75);
+        letter-spacing: 0.1rem;
+        span:nth-child(1){
+          background-color: #3190e8;
+          color: #fff;
+          border: 0.025rem solid #3190e8;
+          font-size: 0.4rem;
+          font-weight: bold;
+          border-radius: 0.08rem;
+          margin-right: 0.2rem;
+        }
+        span:nth-child(2){
+          color: #3190e8;
+          border: 0.025rem solid #3190e8;
+          font-size: 0.4rem;
+          font-weight: bold;
+          border-radius: 0.08rem;
+          margin-right: 0.2rem;
+        }
+      }
+      .fee-left{
+        font-size: 0.5rem;
+        transform: scale(0.9);
+        color: #666;
+      }
+      .fee-right{
+        font-size: 0.5rem;
+        transform: scale(0.9);
+        // margin-right: -0.1rem;
+        color: #666;
+        span:nth-child(3){
+          color: #3190e8;
+        }
+      }
+    }
+    .order-badge{
+      margin-right: -0.5rem;
+    }
+  }
+}
+
+
+@keyframes bounceIn{
+  from, 50%, 100% {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  }
+  0%{
+    opacity: 0;
+  }
+  50%{
+    opacity: 0.5;
+  }
+  100%{
+    opacity: 1.0;
+  }
+}
+
+@keyframes zoomOut{
+  from, 50%, 100% {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  }
+  0%{
+    opacity: 1.0;
+  }
+  50%{
+    opacity: 0.5;
+  }
+  100%{
+    opacity: 0;
+  }
+}

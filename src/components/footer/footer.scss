@@ -1,0 +1,57 @@
+@import '../../style/mixin.scss';
+@import '../../assets/iconfont/iconfont.css';
+
+
+.footer-container{
+  background-color: #fff;
+  position: fixed;
+  z-index: 101;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  @include wh(100%, 1.95rem);
+  display: flex;
+  box-shadow: 0 -0.026667rem 0.053333rem rgba(0,0,0,.1);
+  .guide-item {
+    flex: 1;
+    @include flex;
+    text-align: center;
+    flex-direction: column;
+
+    .icon-changyonglogo40{
+      @include font(1.2rem, #666);
+      margin-top: -0.2rem;
+    }
+    .spec-text{
+      margin-top: -0.2rem;
+    }
+    .icon-zhinanzhen{
+      @include font(0.86rem, #666);
+      margin-top: -0.2rem;
+    }
+    .icon-dingdan{
+      @include font(0.80rem, #666);
+      margin-top: -0.2rem;
+    }
+    .icon-account{
+      @include font(0.80rem, #666);
+      margin-top: -0.2rem;
+      fill: $blue;
+    }
+    span{
+      @include font(.48rem, #666)
+    }
+  }
+}
+
+.active{
+  color: $blue;
+  font-size: 25px;
+  .icon-style{
+    color: $blue!important;
+    font-weight: bold;
+  }
+  span{
+    color: $blue!important;
+  }
+}

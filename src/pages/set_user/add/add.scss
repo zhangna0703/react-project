@@ -1,0 +1,51 @@
+@import '../../../style/mixin.scss';
+
+.adddetail{
+  margin-top: .4rem;
+  .ui-padding-block{
+    background: #fff;
+    padding-top: .4rem;
+    .add-detail{
+      display: block;
+    }
+    .input-new{
+      padding-bottom: .4rem;
+      input{
+        display: block;
+        width: 15rem;
+        font-size: .6rem;
+        margin: 0 auto;
+        padding: .3rem;
+        background: #f2f2f2;
+        border: 1px solid #ddd;
+        border-radius: 3px;
+      }
+    }
+    .verifies{
+      border-color: #ea3106;
+    }
+    p{
+      @include font(.4rem, #ea3106);
+      padding-left: .5rem;
+      margin-top: .2rem;
+    }
+  }
+  .addbutton{
+    margin: .6rem auto;
+    width: 15rem;
+    background: #4CD964;
+    border-radius: 3px;
+    button{
+      width: 100%;
+      @include font(.6rem, #fff, center);
+      line-height: 1.6rem;
+      background: none;
+      font-weight: 700;
+      opacity: .6;
+    }
+    .butopacity{
+      transition: all .4s;
+      opacity: 1;
+    }
+  }
+}

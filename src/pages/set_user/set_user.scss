@@ -1,0 +1,15 @@
+@import '../../assets/iconfont/iconfont.css';
+
+.rating-page{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #f2f2f2;
+  z-index: 201;
+  padding-top: 1.95rem;
+  span{
+    font-family: Helvetica Neue,Tahoma,Arial;
+  }
+}

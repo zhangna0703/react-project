@@ -1,0 +1,59 @@
+@import '../../../style/mixin.scss';
+
+.add-detail{
+  padding: .5rem;
+  @include flex(space-between);
+  background-color: #fff;
+  input{
+    width: 11.8rem;
+    display: block;
+    padding: .4rem;
+    border: 1px solid #ddd;
+    background: #f2f2f2;
+    border-radius: 5px;
+    font-size: .6rem;
+  }
+  button{
+    width: 3rem;
+    display: block;
+    padding: .4rem;
+    background-color: $blue;
+    @include font(.7rem, #fff, center);
+    border-radius: 5px;
+  }
+}
+
+.warnpart{
+  background-color: #FFF6E4;
+  @include font(.62rem, #FF883F, center);
+  padding: .2rem 0;
+}
+
+.point{
+  position: absolute;
+  top: 10rem;
+  width: 100%;
+  p{
+    font-weight: 600;
+    width: 100%;
+    @include font(.7rem, #969696, center);
+    margin-bottom: .4rem;
+  }
+}
+
+.poisearch-container{
+  background: #f2f2f2;
+  li{
+    border-bottom: 1px solid #ccc;
+    padding: .4rem;
+    p{
+      @include font(.65rem, #969696);
+    }
+    p:first-child{
+      margin-bottom: .2rem;
+    }
+  }
+  li:last-child{
+    border: 0;
+  }
+}

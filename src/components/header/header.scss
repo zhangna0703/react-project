@@ -1,0 +1,28 @@
+@import '../../assets/iconfont/iconfont.css';
+@import '../../style/mixin.scss';
+.header-container{
+  position: fixed;
+  background-color: $blue;
+  z-index: 101;
+  left: 0;
+  top: 0;
+  font-weight: bold!important;
+  @include flex;
+  @include wh(100%, 1.95rem);
+
+  .header-back{
+    @include font(1.3rem, #fff);
+    @include positionLeft;
+  }
+
+  .header-title{
+    @include font(0.7rem, #fff);
+    font-family: 'Microsoft YaHei';
+  }
+
+  .user-avatar{
+    @include font(0.8rem, #fff);
+    @include positionRight;
+    font-weight: bold;
+  }
+}

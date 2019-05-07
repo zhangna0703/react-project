@@ -1,0 +1,57 @@
+$blue: #3190e8;
+$bc: #e4e4e4;
+$fc:#fff;
+$common-left: 0.2rem;
+$common-right: 0.6rem;
+
+
+
+// 元素长宽
+@mixin wh($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+// 字体颜色,大小, 水平布局
+@mixin font($size, $color: #333, $text-align: left){
+  font-size: $size;
+  color: $color;
+  text-align: $text-align;
+}
+
+// flex布局
+@mixin flex($justify-content: center, $align-items: center) {
+  display: flex;
+  justify-content: $justify-content;
+  align-items: $align-items;
+}
+
+// 默认按照父元素的剧中
+@mixin positionCenter($position: absolute) {
+  position: $position;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+}
+
+
+// 默认按照父元素的剧中
+@mixin positionHCenter($position: absolute) {
+  position: $position;
+  top: 50%;
+  transform: translate3d(0, -50%, 0);
+}
+
+@mixin positionLeft($position: absolute, $left: $common-left) {
+  position: $position;
+  top: 50%;
+  left: $left;
+  transform: translate3d(0, -50%, 0);
+}
+
+@mixin positionRight($position: absolute, $right: $common-right) {
+  position: $position;
+  top: 50%;
+  right: $right;
+  transform: translate3d(0, -50%, 0);
+}

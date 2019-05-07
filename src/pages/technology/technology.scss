@@ -1,0 +1,11 @@
+@import '../../style/mixin.scss';
+
+.tech-container{
+  padding-top: 1.9rem;
+  .tech-list{
+    @include font(0.9rem, #555);
+    li{
+      padding: 0.2rem 0.5rem;
+    }
+  }
+}

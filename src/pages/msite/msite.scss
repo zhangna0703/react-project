@@ -1,0 +1,167 @@
+@import '../../style/mixin.scss';
+@keyframes progress1{
+  from {
+    width: 0;
+  }
+  to{
+    width: 10rem;;
+  }
+}
+@keyframes progress2{
+  from {
+    width: 0;
+  }
+  to{
+    width: 6rem;;
+  }
+}
+@keyframes progress3{
+  from {
+    width: 0;
+  }
+  to{
+    width: 8rem;;
+  }
+}
+
+@keyframes bounceIn{
+  from, 50%, 100% {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  }
+  0%{
+    opacity: 0;
+  }
+  50%{
+    opacity: 0.5;
+  }
+  100%{
+    opacity: 1.0;
+  }
+}
+
+@keyframes zoomOut{
+  from, 50%, 100% {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  }
+  0%{
+    opacity: 1.0;
+  }
+  50%{
+    opacity: 0.5;
+  }
+  100%{
+    opacity: 0;
+  }
+}
+
+.msite-nav{
+  padding-top: 2.1rem;
+  background-color: #fff;
+  border-bottom: 0.025rem solid #ddd;
+  .swiper-container{
+    @include wh(100%, auto);
+    padding-bottom: 0.6rem;
+    .swiper-pagination{
+      bottom: 0.2rem;
+    }
+  }
+  .swiper-slide{
+    transition:all 1s;
+    animation:bounceIn .6s;
+  }
+  .food-types-container{
+    width: 100%;
+    padding-bottom: 0.6rem;
+    @include flex;
+    flex-wrap: wrap;
+    .food-item{
+      @include wh(4rem, 3.2rem);
+      margin-top: .6rem;
+      padding: 0.4rem;
+      .food-item-inner{
+        background-color: #C0C4CC;
+        @include wh(100%, 100%);
+        border-radius: 3px;
+      }
+    }
+    .link-to-food{
+      width: 25%;
+      padding: 0.3rem 0rem;
+      @include flex;
+      figure{
+        @include flex;
+        flex-direction: column;
+        img{
+          margin-top: 0.3rem;
+          @include wh(1.8rem, 1.8rem)
+        }
+        figcaption{
+          @include font(0.55rem, #666);
+        }
+      }
+    }
+    
+  }
+}
+
+.shop-list-container{
+  margin-top: .4rem;
+  border-top: 0.025rem solid #ddd;
+  background-color: #fff;
+  .shop-header{
+    @include flex(left);
+    padding: .3rem;
+    .icon-shangdian{
+      margin: 0 .4rem 0 .5rem;
+      @include font(0.9rem, #999);
+      font-weight: bold;
+    }
+    .shop-header-title{
+      @include font(0.6rem, #999);
+    }
+  }
+  .skeleton{
+    background-color: #fff;
+    margin-bottom: 1rem;
+    transition:all 1s;
+    animation:bounceIn .6s;
+    .shop-li{
+      display: flex;
+      border-bottom: 0.025rem solid #f1f1f1;
+      padding: 0.7rem 0.4rem;
+      .shop-img{
+        @include wh(2.7rem, 2.7rem);
+        display: block;
+        margin-right: 0.4rem;
+        border-radius: 3px;
+        background-color: #C0C4CC;
+      }
+      .shop-progress{
+        @include flex(space-between, left);
+        flex-direction: column;
+        height: 3.0rem;
+        div{
+          background-color: #C0C4CC;
+          height: 0.6rem;
+          animation: progress1 1.5s infinite alternate;
+        }
+        div:nth-child(2){
+          animation-delay: 0.2s;
+          animation: progress2 1.1s infinite alternate;
+        }
+        div:nth-child(3){
+          animation-delay: 0.4s;
+          animation: progress3 1.3s infinite alternate;
+        }
+      }
+    }
+  }
+}
+
+.site-loader{
+  @include positionCenter(fixed);
+  z-index: 101;
+}
+

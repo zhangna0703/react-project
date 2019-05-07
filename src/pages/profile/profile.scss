@@ -1,0 +1,125 @@
+@import '../../style/mixin.scss';
+@import '../../assets/iconfont/iconfont.css';
+
+.profile-container{
+  p, span{
+    font-family: Helvetica Neue,Tahoma,Arial;
+  }
+  .profile-number{
+    padding-top: 1.96rem;
+    .profile-link{
+      display: block;
+      @include flex(none);
+      box-align: center;
+      padding: .666667rem .6rem;
+      background-color: $blue;
+      .private-image{
+        display: inline-block;
+        @include wh(2.5rem, 2.5rem);
+        border-radius: 50%;
+        vertical-align: middle;
+        font-size: .2rem;
+      }
+      .user-info{
+        margin-left: .48rem;
+        flex-grow: 1;
+        div{
+          font-weight: 700;
+          @include font(.8rem, $fc)
+        }
+        .icon-tel{
+          display: inline-block;
+        }
+      }
+      .icon-arrow-right{
+        @include font(18px, $fc)
+      }
+    }
+  }
+  .info-data{
+    width: 100%;
+    background-color: $fc;
+    box-sizing: border-box;
+    ul{
+      .info-data-link{
+        width: 33.33%;
+        display: inline-block;
+        border-right: 1px solid #f1f1f1;
+        span{
+          display: block;
+          width: 100%;
+          text-align: center;
+        }
+        .info-data-top{
+          @include font(.55rem, #333, center);
+          padding: .853333rem 0 .453333rem;
+          b{
+            display: inline-block;
+            @include font(1.2rem, #f90)
+            font-weight: 700;
+            line-height: 1rem;
+            font-family: Helvetica Neue,Tahoma;
+          }
+        }
+        .info-data-bottom{
+          @include font(.5733rem, #666, center);
+          font-weight: 400;
+          padding-bottom: .45333rem;
+        }
+      }
+      .info-data-link:nth-of-type(2){
+        .info-data-top{
+            b{
+                color:#ff5f3e;
+            }
+        }
+      }
+      .info-data-link:nth-of-type(3){
+        border:0;
+        .info-data-top{
+            b{
+                color:#6ac20b;
+            }
+        }
+      }
+    }
+  }
+  .profile-list{
+    margin-top: .4rem;
+    background-color: $fc;
+    .myorder{
+      padding-left: 1.1rem;
+      @include flex();
+      .order-icon{
+        @include font(.7rem, #666);
+        margin-right: .26667rem;
+        align-items: center;
+      }
+      .icon-jifen1{
+        color: rgb(235, 142, 142);
+      }
+      .icon-huangguan{
+        margin-left: -0.1rem;
+        @include font(.8rem, orange)
+      }
+      .icon-yk_fangkuai_fill{
+        color: $blue;
+      }
+      .icon-changyonglogo40{
+        background-color: $blue;
+        @include font(.65rem, $fc);
+        border-radius: .1rem;
+      }
+      .myorder-text{
+        @include flex(space-between);
+        @include font(.7rem, #333);
+        border-bottom:1px solid #f1f1f1;
+        width: 100%;
+        padding: .433rem .2667rem .433rem 0;
+        .icon-arrow-right{
+          @include font(18px, #777)
+        }
+      }
+    }
+  }
+}
